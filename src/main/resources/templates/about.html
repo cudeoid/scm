@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html
+        lang="en"
+        th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}"
+        xmlns:th="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>About Page</title>
+      <style>
+          body {
+              font-family: Arial, sans-serif;
+              margin: 0;
+              padding: 0;
+              background-color: #f9f9f9;
+          }
+
+          header {
+              background-color: #333;
+              color: #fff;
+              padding: 1rem;
+              text-align: center;
+          }
+
+          header nav {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+          }
+
+          .logo {
+              font-size: 1.5rem;
+              font-weight: bold;
+          }
+
+          .nav-links {
+              list-style: none;
+              margin: 0;
+              padding: 0;
+              display: flex;
+              gap: 1rem;
+          }
+
+          .nav-links li {
+              margin: 0;
+          }
+
+          .nav-links a {
+              color: #fff;
+              text-decoration: none;
+              font-size: 1rem;
+          }
+
+          .nav-links a:hover {
+              text-decoration: underline;
+          }
+
+          .about {
+              padding: 2rem;
+              max-width: 1200px;
+              margin: 0 auto;
+              background-color: #fff;
+              border-radius: 8px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          }
+
+          .about h1 {
+              font-size: 2rem;
+              color: #333;
+              margin-bottom: 1rem;
+          }
+
+          .about-info {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 1rem;
+              align-items: center;
+          }
+
+          .about-img {
+              flex: 1;
+              min-width: 300px;
+          }
+
+          .about-img img {
+              width: 100%;
+              border-radius: 8px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          }
+
+          .about-text {
+              flex: 2;
+          }
+
+          .about-text p {
+              font-size: 1rem;
+              color: #555;
+              line-height: 1.6;
+              margin-bottom: 1rem;
+          }
+
+          .about-text button {
+              padding: 0.5rem 1rem;
+              background-color: #007bff;
+              color: #fff;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+              font-size: 1rem;
+          }
+
+          .about-text button:hover {
+              background-color: #0056b3;
+          }
+
+          .team {
+              padding: 2rem;
+              max-width: 1200px;
+              margin: 0 auto;
+          }
+
+          .team h1 {
+              font-size: 2rem;
+              color: #333;
+              margin-bottom: 1rem;
+          }
+
+          .team-cards {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 1rem;
+          }
+
+          .card {
+              background-color: #fff;
+              border-radius: 8px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              width: calc(33.333% - 1rem);
+              margin-bottom: 1rem;
+          }
+
+          .card-img img {
+              width: 100%;
+              height: 200px;
+              object-fit: cover;
+          }
+
+          .card-info {
+              padding: 1rem;
+          }
+
+          .card-name {
+              font-size: 1.25rem;
+              color: #333;
+              margin-bottom: 0.5rem;
+          }
+
+          .card-role {
+              font-size: 1rem;
+              color: #666;
+              margin-bottom: 0.5rem;
+          }
+
+          .card-email {
+              font-size: 0.875rem;
+              color: #888;
+              margin-bottom: 1rem;
+          }
+
+          .button {
+              padding: 0.5rem 1rem;
+              background-color: #007bff;
+              color: #fff;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+              font-size: 1rem;
+          }
+
+          .button:hover {
+              background-color: #0056b3;
+          }
+
+          footer {
+              background-color: #333;
+              color: #fff;
+              text-align: center;
+              padding: 1rem;
+              position: fixed;
+              bottom: 0;
+              width: 100%;
+          }
+      </style>
+  </head>
+  <body>
+  <div id="content" class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <div class="about grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-8">
+          <div class="about-img">
+              <img src="/images/about.jpg" alt="Smart Contact Management" class="rounded-lg shadow-lg">
+
+          </div>
+          <div class="about-text">
+              <h1 class="text-3xl font-bold mb-4">About Us</h1>
+              <p class="mb-4 text-gray-700 dark:text-gray-300">
+                  Welcome to Smart Contact Management, your ultimate solution for efficient and organized contact management.
+                  We provide a powerful platform that helps you manage your contacts, track interactions, and stay connected with your network.
+              </p>
+              <p class="mb-4 text-gray-700 dark:text-gray-300">
+                  Our platform offers features such as contact import/export, tagging, and advanced search capabilities, designed to streamline your contact management process.
+                  Whether you are an individual looking to organize personal contacts or a business aiming to manage client relationships, our solution is tailored to meet your needs.
+              </p>
+
+          </div>
+      </div>
+  </div>
+
+
+  <section class="team">
+      <h1>Meet Our Team</h1>
+      <div class="team-cards">
+          <!-- Card 1 -->
+          <div class="card">
+              <div class="card-img">
+                  <img src="https://via.placeholder.com/400x300.png?text=Team+Member+1" alt="Team Member 1">
+              </div>
+              <div class="card-info">
+                  <h2 class="card-name">Jane Doe</h2>
+                  <p class="card-role">CEO and Founder</p>
+                  <p class="card-email">jane.doe@example.com</p>
+                  <button class="button">Contact</button>
+              </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card">
+              <div class="card-img">
+                  <img src="https://via.placeholder.com/400x300.png?text=Team+Member+2" alt="Team Member 2">
+              </div>
+              <div class="card-info">
+                  <h2 class="card-name">John Smith</h2>
+                  <p class="card-role">Co-Founder</p>
+                  <p class="card-email">john.smith@example.com</p>
+                  <button class="button">Contact</button>
+              </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card">
+              <div class="card-img">
+                  <img src="https://via.placeholder.com/400x300.png?text=Team+Member+3" alt="Team Member 3">
+              </div>
+              <div class="card-info">
+                  <h2 class="card-name">Emily Johnson</h2>
+                  <p class="card-role">Lead Developer</p>
+                  <p class="card-email">emily.johnson@example.com</p>
+                  <button class="button">Contact</button>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <footer>
+      <p>&copy; 2024 Smart Contact Management. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+      console.log("About page loaded");
+  </script>
+  <script>
+      console.log("second about page script");
+  </script>
+
+  </body>
+</html>
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">-->
+
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>About Us - Smart Contact Management</title>-->
+<!--    <link rel="stylesheet" href="style.css"> &lt;!&ndash; Link to your CSS file &ndash;&gt;-->
+<!--    -->
+<!--</head>-->
+
+<!--<body>-->
+<!--<header>-->
+<!--    <nav>-->
+<!--        <div class="logo">Smart Contact Management</div>-->
+<!--        <ul class="nav-links">-->
+<!--            <li><a href="#">Home</a></li>-->
+<!--            <li><a href="#">About</a></li>-->
+<!--            <li><a href="#">Services</a></li>-->
+<!--            <li><a href="#">Contact</a></li>-->
+<!--        </ul>-->
+<!--    </nav>-->
+<!--</header>-->
+
+
+
+
+
+<!--<footer>-->
+<!--    <p>&copy; 2024 Smart Contact Management. All Rights Reserved.</p>-->
+<!--</footer>-->
+
+<!--<script>-->
+<!--    console.log("About page loaded");-->
+<!--</script>-->
+<!--<script>-->
+<!--    console.log("second about page script");-->
+<!--</script>-->
+<!--</body>-->
+
+<!--</html>-->
+
